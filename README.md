@@ -31,7 +31,7 @@ O retorno da consulta a API deve ser realizado em formato JSON e seguindo a estr
     data_nascimento: '1949-06-19'
     telefone: '21 6322-5698', 
     tem_comorbidades: true
-    vacinada_covid19: true    
+    vacinado_covid19: true    
 },
 ```
 
@@ -40,20 +40,29 @@ ___
 
 Para consumir os dados da API, você deverá criar uma SPA em ReactJS e Bootstrap.
 Esta SPA deverá conter duas rotas: 
-- Page com tabela contendo todos os pacientes (nome, data_nascimento, telefone);
+- Page com tabela contendo todos os pacientes (nome, idade e telefone);
 - Page com todos os dados de um único paciente.
 
 Na **primeira rota**, cada linha da tabela deverá conter uma quarta coluna.
-Dentro desta coluna, haverá um botão com um link para a *segunda rota*, onde serão exibidos todos os dados daquele paciente.
+Dentro desta última coluna, deverá haver um botão com um link para a **segunda rota**, onde serão exibidos todos os dados daquele paciente (nome, data_nascimento, idade, telefone, tem comorbidades?, foi vacinado?).
+
+**IMPORTANTE:** Antes de listar ou exibir os dados vindos da API, grave-os no estado global da SPA, usando o **Redux**, seguindo o seguinte estado inicial:
+
+```
+{
+    pacientes: [...],
+    pacienteSelecionado: {...}
+},
+```
 
 ___
 ## **O que vamos avaliar:**
 
 - Desempenho;
-- Manutenabilidade;
-- Organização;
+- Manutenibilidade;
+- Organização e clareza do código;
 - Conhecimento ferramental;
-- Boas práticas.
+- Aplicação de boas práticas.
 
 ___
 ## **Para finalizar...**

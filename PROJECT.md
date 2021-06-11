@@ -1,81 +1,95 @@
-# Desafio: Pacientes COVID-19
+# Aplicativo SPA Laravel React para Pacientes
 
-**Atenção, Dev!**
+Este é um aplicativo básico com duas telas, sendo uma com uma listagem de pacientes com base em um documento chamado "lista_pacientes.xlsx" que está disponível no diretório "challenge" e uma página onde serão exibidos todos os dados do paciente selecionado, construída usando Laravel e React.
 
-Antes de "meter a mão na massa", leia com atenção todas as instruções abaixo.
+## Instalação
 
+### Clonando e instalando dependências
 
-## Primeira Etapa - API (backend)
-Você deve construir uma API REST com PHP LARAVEL que retorne os dados referentes aos dados de 10 pacientes.
+Clone o repositório
 
-Os dados de cada paciente são:
+    git clone https://github.com/Breno098/challenger-june2021.git
 
-- Nome do Paciente
-- Data de Nascimento
-- Telefone
-- Tem comorbidades?
-- Já foi vacinado contra Covid-19?
+Navegue até a pasta do projeto:
 
-Primeiramente os dados dos 10 pacientes devem ser cadastrados em uma tabela de banco de dados MariaDB (ou Mysql) através de uma SEEDER do LARAVEL, com base em um documento chamado **"lista_pacientes.xlsx"** que está disponível no diretório **"challenge"**.
+    cd .\challenger-june2021\project\
 
-Logo após, a API deve ser construída para a responder através de duas rotas: 
-- Retorno de um Array com os dados de todos os pacientes;
-- Retorno dos dados de um único paciente.
+Faça a instalação das dependencias PHP com o comando:
 
-O retorno da consulta a API deve ser realizado em formato JSON e seguindo a estrutura abaixo:
+    composer install
 
-```
-{
-    id: 1,
-    nome: 'Maria Joaquina de Mendonça',
-    data_nascimento: '1949-06-19'
-    telefone: '21 6322-5698', 
-    tem_comorbidades: true
-    vacinado_covid19: true    
-},
-```
+E para as dependencias JavaScript, utilize
 
-___
-## Segunda Etapa - SPA (frontend)
+    npm install
 
-Para consumir os dados da API, você deverá criar uma SPA em ReactJS e Bootstrap.
-Esta SPA deverá conter duas rotas: 
-- Page com tabela contendo todos os pacientes (nome, idade e telefone);
-- Page com todos os dados de um único paciente.
+### Comandos para execução e construção
 
-Na **primeira rota**, cada linha da tabela deverá conter uma quarta coluna.
-Dentro desta última coluna, deverá haver um botão com um link para a **segunda rota**, onde serão exibidos todos os dados daquele paciente (nome, data_nascimento, idade, telefone, tem comorbidades?, foi vacinado?).
+Copie o arquivo env de exemplo e faça as alterações de configuração necessárias no arquivo .env
 
-**IMPORTANTE:** Antes de listar ou exibir os dados vindos da API, grave-os no estado global da SPA, usando o **Redux**, seguindo o seguinte estado inicial:
+    cp .env.example .env
 
-```
-{
-    pacientes: [...],
-    pacienteSelecionado: {...}
-},
-```
+Gerar uma nova chave de aplicativo
 
-___
-## **O que vamos avaliar:**
+    php artisan key:generate
 
-- Desempenho;
-- Manutenibilidade;
-- Organização e clareza do código;
-- Conhecimento ferramental;
-- Aplicação de boas práticas.
+Execute as migrações do banco de dados (defina a conexão do banco de dados em .env antes de migrar)
 
-___
-## **Para finalizar...**
-Se liga nessas informações importantes para o início e conclusão do desafio:
+    php artisan migrate
 
-- Crie um **fork** e desenvolva a sua solução nele.
-- Crie um **PROJECT.md** com a explicação de como devemos executar o projeto e o máximo de detalhes possível sobre o que foi feito e como foi feito (bibliotecas utilizadas, o porquê de utilizá-las, etc).
-- Após concluir todas as tarefas, faça um **pull request**.
-- Envie um E-mail para "**thiago.ferreira@cdts.fiocruz.br**" com o link do seu **pull request** e com o assunto "**challenge accepted**".
+Inicie o servidor de desenvolvimento local
 
-Caso tenha alguma dívida, entre em contato conosco também através do E-mail "**thiago.ferreira@cdts.fiocruz.br**".
-___
-### **Bom... Por enquanto é só isso tudo.**
+    php artisan serve
 
-Um excelente desafio e que a força esteja com você! o/
-#### **Let's Go!**
+Construa e execute o projeto com o comando:
+
+    npm run watch 
+    // OU
+    npm run dev
+
+Agora você pode acessar o servidor em http: // localhost: 8000
+
+## Populando banco de dados
+
+Preencha os dados para tabela de pacientes. Execute o comando:
+
+    php artisan db:seed
+
+## Visão geral do código
+
+### Dependências
+
+    - [Redux](https://redux.js.org/) - Com o Redux, há um estado geral na loja e cada componente tem acesso ao estado. Isso elimina a necessidade de passar continuamente o estado de um componente para outro. Ao usar o Redux com React, os estados não precisarão mais ser levantados, portanto, fica mais fácil rastrear qual ação causa qualquer alteração.
+    - [React Redux](https://react-redux.js.org/) - O React Redux é mantido pela equipe do Redux e atualizado com as APIs mais recentes do Redux e do React .
+    - [Moment.js](https://momentjs.com/) - Moment.js facilita o desenvolvimento e a manipulação de datas.
+    - [BootStrap](https://getbootstrap.com/) - O BOotStrap oferece diversos templates, componentes e estilizações css de forma rápida e prática. Por ser um dos framework css mais populares no mundo, a manutenção e suporte são de fácil acesso.
+    
+### Pastas
+
+    - `project/app` - Contém todos os modelos Eloquent
+    - `app` - Contains all the Eloquent models
+    - `project/app/Http/Controllers` - Contém todos os controladores da aplicação
+    - `project/app/Models` - Contém todos os modelos/entidades da aplicação
+    - `project/config` - Contém todos os arquivos de configuração do aplicativo
+    - `project/database/migrations` - Contém todas as migrações de banco de dados
+    - `project/database/seeds` - Contém o semeador de banco de dados
+    - `project/routes/view` - Contém todas as views da aplicação
+    - `project/routes/js/components` - Contém componentes React
+    - `project/routes/js/pages` - Contém páginas construídas com React
+    - `project/routes/js/reducers` - Contém todos os reducers utilizados
+    - `project/routes/js/routes` - Contém todos as rotas do SPA
+    - `project/routes/js/store` - Contém arquivo de store
+    - `project/routes` - Contém todas as rotas api definidas no arquivo api.php
+
+### Variáveis de ambiente
+
+    - `project/.env` - As variáveis ​​de ambiente podem ser definidas neste arquivo
+
+### API para uso local e testes
+
+Execute o servidor de desenvolvimento laravel:
+
+    php artisan serve
+
+A API agora pode ser acessada em:
+
+    http://localhost:8000/api

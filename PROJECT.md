@@ -65,24 +65,24 @@ Preencha os dados para tabela de pacientes. Execute o comando:
     
 ### Pastas
 
-    - `project/app` - Contém todos os modelos Eloquent
-    - `app` - Contains all the Eloquent models
-    - `project/app/Http/Controllers` - Contém todos os controladores da aplicação
-    - `project/app/Models` - Contém todos os modelos/entidades da aplicação
-    - `project/config` - Contém todos os arquivos de configuração do aplicativo
-    - `project/database/migrations` - Contém todas as migrações de banco de dados
-    - `project/database/seeds` - Contém o semeador de banco de dados
-    - `project/routes/view` - Contém todas as views da aplicação
-    - `project/routes/js/components` - Contém componentes React
-    - `project/routes/js/pages` - Contém páginas construídas com React
-    - `project/routes/js/reducers` - Contém todos os reducers utilizados
-    - `project/routes/js/routes` - Contém todos as rotas do SPA
-    - `project/routes/js/store` - Contém arquivo de store
-    - `project/routes` - Contém todas as rotas api definidas no arquivo api.php
+- `project/app` - Contém todos os modelos Eloquent
+- `app` - Contains all the Eloquent models
+- `project/app/Http/Controllers` - Contém todos os controladores da aplicação
+- `project/app/Models` - Contém todos os modelos/entidades da aplicação
+- `project/config` - Contém todos os arquivos de configuração do aplicativo
+- `project/database/migrations` - Contém todas as migrações de banco de dados
+- `project/database/seeds` - Contém o semeador de banco de dados
+- `project/routes/view` - Contém todas as views da aplicação
+- `project/routes/js/components` - Contém componentes React
+- `project/routes/js/pages` - Contém páginas construídas com React
+- `project/routes/js/reducers` - Contém todos os reducers utilizados
+- `project/routes/js/routes` - Contém todos as rotas do SPA
+- `project/routes/js/store` - Contém arquivo de store
+- `project/routes` - Contém todas as rotas api definidas no arquivo api.php
 
 ### Variáveis de ambiente
 
-    - `project/.env` - As variáveis ​​de ambiente podem ser definidas neste arquivo
+- `project/.env` - As variáveis ​​de ambiente podem ser definidas neste arquivo
 
 ### API para uso local e testes
 

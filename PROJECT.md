@@ -58,10 +58,10 @@ Preencha os dados para tabela de pacientes. Execute o comando:
 
 ### Dependências
 
-    - [Redux](https://redux.js.org/) - Com o Redux, há um estado geral na loja e cada componente tem acesso ao estado. Isso elimina a necessidade de passar continuamente o estado de um componente para outro. Ao usar o Redux com React, os estados não precisarão mais ser levantados, portanto, fica mais fácil rastrear qual ação causa qualquer alteração.
-    - [React Redux](https://react-redux.js.org/) - O React Redux é mantido pela equipe do Redux e atualizado com as APIs mais recentes do Redux e do React .
-    - [Moment.js](https://momentjs.com/) - Moment.js facilita o desenvolvimento e a manipulação de datas.
-    - [BootStrap](https://getbootstrap.com/) - O BOotStrap oferece diversos templates, componentes e estilizações css de forma rápida e prática. Por ser um dos framework css mais populares no mundo, a manutenção e suporte são de fácil acesso.
+- [Redux](https://redux.js.org/) - Com o Redux, há um estado geral na loja e cada componente tem acesso ao estado. Isso elimina a necessidade de passar continuamente o estado de um componente para outro. Ao usar o Redux com React, os estados não precisarão mais ser levantados, portanto, fica mais fácil rastrear qual ação causa qualquer alteração.
+- [React Redux](https://react-redux.js.org/) - O React Redux é mantido pela equipe do Redux e atualizado com as APIs mais recentes do Redux e do React .
+- [Moment.js](https://momentjs.com/) - Moment.js facilita o desenvolvimento e a manipulação de datas.
+- [BootStrap](https://getbootstrap.com/) - O BOotStrap oferece diversos templates, componentes e estilizações css de forma rápida e prática. Por ser um dos framework css mais populares no mundo, a manutenção e suporte são de fácil acesso.
     
 ### Pastas
 

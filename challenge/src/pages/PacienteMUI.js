@@ -39,7 +39,7 @@ const PacienteMUI = (props) => {
               <Divider style={{margin: '24px 0'}} />
             </CardContent>
             <CardActions>
-              <NavLink to="/pacientes">
+              <NavLink to="/mui/pacientes">
                 <Button  size="small" startIcon={<ArrowBackIosRounded />} onClick={() => dispatch(limparPaciente())} >Voltar</Button>
               </NavLink>
             </CardActions>

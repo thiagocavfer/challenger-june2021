@@ -1,5 +1,11 @@
 # Desafio: Pacientes COVID-19
 
+## Repositório
+Para clonar o repositório basta executar o comando
+```
+git clone https://github.com/alexanderlima/challenger-june2021
+```
+
 ## Executando Backend/API
 
 ### Utilizando o Docker
@@ -50,7 +56,7 @@ cd api
 ```
 Em seguida rode o seguinte comando:
 ```
-composer update
+composer install ou composer update
 ```
 
 Uma vez que os containers estão funcionando e o composer foi atualizado, ao acessar http://localhost/api/ deverá receber a mensagem *"Yes! A API funcionando"*.

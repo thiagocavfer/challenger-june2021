@@ -92,7 +92,7 @@ cd ../challenge
 ```
 Instale as dependências do projeto.
 ```
-yarn install
+npm install ou yarn install
 ```
 
 Execute o comando abaixo para iniciar o servidor do React.

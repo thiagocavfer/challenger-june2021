@@ -1,35 +1,38 @@
 /**
- * Reducer para lista de pacientes
+ * Reducer do paciente selecionado
  */
 
 const initialState = {
   loading: true,
-  data: [],
+  data: {},
   error: null
 };
 
-const pacientesReducer = (state = initialState, action) => {
+
+const pacienteSelecionado = (state = initialState, action) => {
   switch (action.type) {
-    case 'LISTA_PACIENTES_INICIADO':
+    case 'EXIBE_PACIENTE_INICIADO':
       return {
         ...state,
         loading: true
       };
-    case 'LISTA_PACIENTES_SUCESSO':
+    case 'EXIBE_PACIENTE_SUCESSO':
       return {
         loading: false,
         error: null,
         data: action.payload
       };
-    case 'LISTA_PACIENTES_FALHA':
+    case 'EXIBE_PACIENTE_FALHA':
       return {
         ...state,
         loading: false,
         error: action.payload.error
       };
+    case 'LIMPA_PACIENTE':
+      return initialState;
     default:
       return state;
   }
 }
 
-export default pacientesReducer;
+export default pacienteSelecionado;

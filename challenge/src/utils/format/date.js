@@ -1,3 +1,7 @@
+/**
+ * Funções para formatação de datas
+ */
+
 import moment from 'moment';
 import 'moment/locale/pt-br';
 
